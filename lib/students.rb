@@ -13,8 +13,7 @@ def average_student_gpa
 end
 
 def total_tardies_for_all_students
-  puts @db.execute("SELECT tardies FROM students;")
-  puts @db.execute("SELECT COUNT(tardies) FROM students WHERE students.tardies > 0;")
+  "SELECT SUM(tardies) FROM students WHERE students.tardies > 0;"
 end
 
 def average_gpa_for_9th_grade
